@@ -13,7 +13,7 @@ function isJsFile(path) {
 }
 
 function isSpecFile(path) {
-	return endsWith(path, '.tests.js');
+	return endsWith(path, '.spec.js');
 }
 
 function endsWith(path, ending) {
