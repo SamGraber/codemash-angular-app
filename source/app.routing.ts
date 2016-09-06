@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { ScheduleComponent } from './schedule/schedule.component';
+import { CategoryListComponent } from './categories/categoryList/categoryList.component';
 
 const appRoutes: Routes = [
 	{
@@ -20,10 +21,10 @@ const appRoutes: Routes = [
 	// 	path: 'presenters',
 	// 	component: null,
 	// },
-	// {
-	// 	path: 'categories',
-	// 	component: null,
-	// },
+	{
+		path: 'categories',
+		component: CategoryListComponent,
+	},
 ];
 
 export const appRouting: any = RouterModule.forRoot(appRoutes);

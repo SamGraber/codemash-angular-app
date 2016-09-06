@@ -5,6 +5,7 @@ import { AppComponent }  from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { CategoryListComponent } from './categories/categoryList/categoryList.component';
 import { appRouting } from './app.routing';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { appRouting } from './app.routing';
 		HeaderComponent,
 		FooterComponent,
 		ScheduleComponent,
+		CategoryListComponent,
 	],
 	bootstrap: [AppComponent]
 })
