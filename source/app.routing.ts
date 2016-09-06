@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { ScheduleComponent } from './schedule/schedule.component';
-import { CategoryListComponent } from './categories/categoryList/categoryList.component';
+import { CategoryListComponent } from './categories/category-list/category-list.component';
 
 const appRoutes: Routes = [
 	{
