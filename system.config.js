@@ -11,6 +11,7 @@ var defaultPackageNames = [
 	'@angular/platform-browser',
 	'@angular/platform-browser-dynamic',
 	'@angular/http',
+	'@angular/router',
 ];
 
 var packages = {
