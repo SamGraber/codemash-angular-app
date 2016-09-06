@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
 	moduleId: module.id,
 	selector: 'cmHeader',
 	templateUrl: 'header.component.html',
+	styleUrls: ['header.component.css'],
 })
 export class HeaderComponent {}

@@ -1,0 +1,85 @@
+header {
+	flex-shrink: 0;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	background: #0c84a9;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	cursor: pointer;
+	color: orange;
+}
+
+nav {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.main {
+	text-transform: uppercase;
+	padding: 0 40px;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+li {
+	margin: 2px 20px;
+}
+
+.profile {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	order: 2;
+}
+
+.menu:hover {
+	cursor: pointer;
+	color: orange;
+}
+
+.pic {
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+	border: 1px solid #fff;
+	margin: 0 3px;
+}
+
+.pic:hover {
+	border-color: orange;
+}
+
+.drop-down {
+	font-size: 0.6em;
+}
+
+.schedule {
+	order: 1;
+	font-size: 1.2em;
+	margin: 0 15px;
+}

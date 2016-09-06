@@ -12,3 +12,40 @@ body {
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+.scroll {
+  font-size: 2em;
+  align-self: center;
+  margin-right: 25px;
+}
+
+.scroll:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.return {
+  margin-right: 25px;
+  font-size: 1.5em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
