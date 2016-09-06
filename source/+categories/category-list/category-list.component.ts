@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { CategoryService } from '../shared/category.service';
+import { CategoryService, Category } from '../shared/category.service';
 
 @Component({
 	moduleId: module.id,
@@ -9,7 +9,7 @@ import { CategoryService } from '../shared/category.service';
 	templateUrl: 'category-list.component.html',
 })
 export class CategoryListComponent implements OnInit {
-	categories: Observable<any>;
+	categories: Observable<Category[]>;
 
 	constructor(private categoryService: CategoryService) { }
 
