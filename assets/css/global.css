@@ -1,16 +1,9 @@
 html, body {
-  height: 100%;
   margin: 0;
 }
 
 body {
   color: #222;
-}
-
-.site {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Open Sans', sans-serif;
 }
 
 a {
