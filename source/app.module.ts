@@ -2,8 +2,8 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { CategoryListComponent } from './categories/category-list/category-list.component';
 import { appRouting } from './app.routing';
