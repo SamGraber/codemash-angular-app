@@ -4,12 +4,8 @@
 	<button><i class="fa fa-search"></i></button>
 </div>
 <ul>
-	<li class="category">
-		<h3><a href="/categories_1">Front-end</a></h3>
-		<p>Web application user interfaces.</p>
-	</li>
-	<li class="category">
-		<h3><a href="/categories/2">JavaScript</a></h3>
-		<p>Sessions related to writing JavaScript.</p>
+	<li class="category" *ngFor="let category of categories | async">
+		<h3><a [routerLink]="['/categories', category.id]">{{category.name}}</a></h3>
+		<p>{{category.description}}</p>
 	</li>
 </ul>
