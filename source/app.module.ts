@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { appRouting } from './app.routing';
 
@@ -14,6 +15,7 @@ import { appRouting } from './app.routing';
 	declarations: [
 		AppComponent,
 		HeaderComponent,
+		FooterComponent,
 		ScheduleComponent,
 	],
 	bootstrap: [AppComponent]
