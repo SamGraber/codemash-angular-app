@@ -1,7 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { ScheduleComponent } from './schedule/schedule.component';
-import { CategoryListComponent } from './categories/category-list/category-list.component';
 
 const appRoutes: Routes = [
 	{
@@ -23,7 +22,7 @@ const appRoutes: Routes = [
 	// },
 	{
 		path: 'categories',
-		component: CategoryListComponent,
+		loadChildren: 'source/+categories/categories.module',
 	},
 ];
 
