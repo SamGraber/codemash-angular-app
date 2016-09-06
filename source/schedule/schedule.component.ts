@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
 	moduleId: module.id,
 	selector: 'cmSchedule',
 	templateUrl: 'schedule.component.html',
+	styleUrls: ['schedule.component.css'],
 })
 export class ScheduleComponent {}
