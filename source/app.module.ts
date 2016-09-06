@@ -3,11 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent, FooterComponent } from './shared/index';
 import { ScheduleComponent } from './schedule/schedule.component';
-import { CategoryListComponent } from './categories/category-list/category-list.component';
-import { CategoryService } from './categories/shared/category.service';
+import { CategoryListComponent, CategoryService } from './categories/index';
 import { appRouting } from './app.routing';
 
 @NgModule({
