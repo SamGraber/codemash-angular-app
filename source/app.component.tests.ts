@@ -8,6 +8,6 @@ describe('AppComponent', () => {
 	});
 
 	it('should be true', () => {
-		expect(app.trueProp).to.be.true;
+		expect(true).to.be.true;
 	});
 });
