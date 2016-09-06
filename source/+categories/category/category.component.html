@@ -1,1 +1,9 @@
-{{category?.name}}
+<div *ngIf="category">
+	<div class="title">
+		<div class="return"><a routerLink="/categories"><i class="fa fa-reply"></i></a></div>
+		<h1>{{category.name}}</h1>
+	</div>
+	<div class="category">
+		<p>{{category.description}}</p>
+	</div>
+</div>
