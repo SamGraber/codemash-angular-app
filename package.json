@@ -1,5 +1,5 @@
 {
-	"name": "codemash-angular-setup",
+	"name": "codemash-angular-app",
 	"version": "1.0.0",
 	"scripts": {
 		"start": "tsc && npm-run-all --parallel tsc:w lite",
@@ -26,7 +26,6 @@
 		"rxjs": "5.0.0-beta.6",
 		"systemjs": "0.19.27",
 		"zone.js": "^0.6.12",
-		"angular2-in-memory-web-api": "0.0.17",
 		"bootstrap": "^3.3.6"
 	},
 	"devDependencies": {
