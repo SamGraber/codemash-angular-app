@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 
-import { CategoryListComponent, CategoryService } from './index';
+import { CategoryListComponent, CategoryComponent, CategoryService } from './index';
 import { categoryRouting } from './categories.routing';
 
 @NgModule({
@@ -12,6 +12,7 @@ import { categoryRouting } from './categories.routing';
 		categoryRouting,
 	],
 	declarations: [
+		CategoryComponent,
 		CategoryListComponent,
 	],
 	providers: [CategoryService],
