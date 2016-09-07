@@ -5,5 +5,15 @@
 	</div>
 	<div class="category">
 		<p>{{category.description}}</p>
+		<ul class="events">
+			<li class="event" *ngFor="let event of category.events">
+				<h3>{{event.name}}</h3>
+				<h4>{{event.timeslot}}</h4>
+				<ul class="category-tags">
+					<li *ngFor="let subCategory of event.categories"><a [routerLink]="['/categories', subCategory.id]">{{subCategory.name}}</a></li>
+				</ul>
+				<p>{{event.description}}</p>
+			</li>
+		</ul>
 	</div>
 </div>
