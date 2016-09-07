@@ -1,0 +1,7 @@
+<div class="search">
+	<input type="text"
+		   #searchBox
+		   placeholder="Search"
+		   (keyup.enter)="search(searchBox.value)" />
+	<button (click)="search(searchBox.value)"><i class="fa fa-search"></i></button>
+</div>

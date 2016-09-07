@@ -2,6 +2,7 @@ var map = {
 	'@angular': 'node_modules/@angular',
 	'rxjs': 'node_modules/rxjs',
 	'app': 'source',
+	'lodash': 'node_modules/lodash/index.js',
 };
 
 var defaultPackageNames = [

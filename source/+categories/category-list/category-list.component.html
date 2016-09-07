@@ -1,10 +1,7 @@
 <h1>Categories</h1>
-<div class="search">
-	<input type="text" placeholder="Search" />
-	<button><i class="fa fa-search"></i></button>
-</div>
+<cm-search-box [items]="categories" (filteredItems)="visibleCategories = $event"></cm-search-box>
 <ul>
-	<li class="category" *ngFor="let category of categories | async">
+	<li class="category" *ngFor="let category of visibleCategories">
 		<h3><a [routerLink]="['/categories', category.id]">{{category.name}}</a></h3>
 		<p>{{category.description}}</p>
 	</li>
