@@ -19,7 +19,7 @@ describe('CategoryComponent', () => {
 		categoryList = new CategoryComponent(<any>activatedRoute);
 	});
 
-	it('should load the categories on init', () => {
+	it('should get the category from the active route', () => {
 		const expectedCategory = { id: 2, name: 'Test2' };
 		activatedRoute.data.next({ category: <any>expectedCategory });
 
