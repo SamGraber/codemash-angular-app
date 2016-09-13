@@ -4,7 +4,9 @@ import { HttpModule } from '@angular/http';
 
 import { ComponentsModule } from '../components/components.module';
 import { CategoryListComponent, CategoryComponent, CategoryService } from './index';
-import { categoryRouting } from './categories.routing';
+import { categoryRouting } from './routing/categories.routing';
+import { CategoryResolver } from './routing/category.resolver';
+import { CategoryListResolver } from './routing/categoryList.resolver';
 
 @NgModule({
 	imports: [
@@ -17,6 +19,10 @@ import { categoryRouting } from './categories.routing';
 		CategoryComponent,
 		CategoryListComponent,
 	],
-	providers: [CategoryService],
+	providers: [
+		CategoryService,
+		CategoryResolver,
+		CategoryListResolver,
+	],
 })
 export default class CategoryModule { }

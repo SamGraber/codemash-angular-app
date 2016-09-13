@@ -1,34 +1,34 @@
-import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 import { CategoryListComponent } from './category-list.component';
+import { Category } from '../shared/category';
 
-interface ICategoryServiceMock {
-	getCategories: Sinon.SinonSpy;
+interface IActivatedRouteMock {
+	data: BehaviorSubject<{ categories: Category[] }>;
 }
 
 describe('CategoryListComponent', () => {
 	let categoryList: CategoryListComponent;
-	let categoryService: ICategoryServiceMock;
+	let activatedRoute: IActivatedRouteMock;
 
 	beforeEach(() => {
-		categoryService = {
-			getCategories: sinon.spy(),
+		activatedRoute = {
+			data: new BehaviorSubject(null),
 		};
 
-		categoryList = new CategoryListComponent(<any>categoryService);
+		categoryList = new CategoryListComponent(<any>activatedRoute);
 	});
 
 	it('should load the categories on init', () => {
-		let categories;
 		const expectedCategories = [
 			{ id: 1, name: 'Test1' },
 			{ id: 2, name: 'Test2' },
 		];
-		categoryService.getCategories = sinon.spy(() => Observable.of(expectedCategories));
+		activatedRoute.data.next({ categories: <any>expectedCategories });
 
 		categoryList.ngOnInit();
 
-		categoryList.categories.subscribe(data => categories = data);
-		expect(categories).to.deep.equal(expectedCategories);
+		expect(categoryList.categories).to.deep.equal(expectedCategories);
+		expect(categoryList.visibleCategories).to.deep.equal(expectedCategories);
 	});
 });

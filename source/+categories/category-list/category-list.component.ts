@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { CategoryService, Category } from '../shared/category.service';
@@ -9,11 +10,15 @@ import { CategoryService, Category } from '../shared/category.service';
 	templateUrl: 'category-list.component.html',
 })
 export class CategoryListComponent implements OnInit {
-	categories: Observable<Category[]>;
+	categories: Category[];
+	visibleCategories: Category[];
 
-	constructor(private categoryService: CategoryService) { }
+	constructor(private activatedRoute: ActivatedRoute) { }
 
 	ngOnInit(): void {
-		this.categories = this.categoryService.getCategories();
+		this.activatedRoute.data.map((x: any) => x.categories).subscribe(categories => {
+			this.categories = categories;
+			this.visibleCategories = categories;
+		});
 	}
 }

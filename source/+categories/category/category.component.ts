@@ -13,12 +13,11 @@ import { ICategoryDetailParams } from '../categories.routing';
 export class CategoryComponent implements OnInit {
 	category: Category;
 
-	constructor(private categoryService: CategoryService
-			, private activatedRoute: ActivatedRoute) { }
+	constructor(private activatedRoute: ActivatedRoute) { }
 
 	ngOnInit(): void {
-		this.activatedRoute.params.map((params: ICategoryDetailParams) => params.id)
-								  .switchMap(id => this.categoryService.getCategory(id))
-								  .subscribe(category => this.category = category);
+		this.activatedRoute.data.map((x: any) => x.category).subscribe(Category => {
+			this.category = Category;
+		});
 	}
 }
