@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { CategoryService, Category } from '../shared/category.service';
-import { ICategoryDetailParams } from '../categories.routing';
+import { ICategoryDetailParams } from '../routing/categories.routing';
 
 @Component({
 	moduleId: module.id,
