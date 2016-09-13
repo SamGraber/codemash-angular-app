@@ -43,6 +43,10 @@ li {
 	margin: 2px 20px;
 }
 
+li a.active {
+	font-weight: bold;
+}
+
 .profile {
 	display: flex;
 	flex-direction: row;
