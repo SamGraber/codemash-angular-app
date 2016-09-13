@@ -13,7 +13,6 @@ export class SearchBoxComponent<T> {
 	search(term: string): void {
 		const results = filter(this.items, item => this.textSearch(item, term));
 		this.filteredItems.emit(results);
-		console.log(results);
 	}
 
 	private textSearch(object: any, search: string): boolean {
