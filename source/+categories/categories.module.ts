@@ -6,7 +6,7 @@ import { ComponentsModule } from '../components/components.module';
 import { CategoryListComponent, CategoryComponent, CategoryService } from './index';
 import { categoryRouting } from './routing/categories.routing';
 import { CategoryResolver } from './routing/category.resolver';
-import { CategoryListResolver } from './routing/categoryList.resolver';
+import { CategoryListResolver } from './routing/category-list.resolver';
 
 @NgModule({
 	imports: [
