@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
 
 import { ComponentsModule } from '../components/components.module';
 import { CategoryListComponent, CategoryComponent, CategoryService } from './index';
@@ -11,7 +10,6 @@ import { CategoryListResolver } from './routing/category-list.resolver';
 @NgModule({
 	imports: [
 		CommonModule,
-		HttpModule,
 		ComponentsModule,
 		categoryRouting,
 	],
