@@ -9,7 +9,7 @@
 			<li class="event" *ngFor="let event of presenter.events">
 				<h3>{{event.name}}</h3>
 				<h4>{{event.timeslot}}</h4>
-				<ul class="presenter-tags">
+				<ul class="category-tags">
 					<li *ngFor="let subPresenter of event.categories"><a [routerLink]="['/categories', subPresenter.id]">{{subPresenter.name}}</a></li>
 				</ul>
 				<p>{{event.description}}</p>
