@@ -1,10 +1,9 @@
 import { Category } from './category';
-import { Event } from './event';
 
-export interface Presenter {
+export interface Event {
 	id: number;
 	name: string;
-	bio: string;
+	timeslot: string;
+	description: string;
 	categories: Category[];
-	events: Event[];
 }
