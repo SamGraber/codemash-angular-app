@@ -3,10 +3,10 @@
 <ul>
 	<li class="presenter" *ngFor="let presenter of visiblePresenters">
 		<h3><a [routerLink]="['/presenters', presenter.id]">{{presenter.name}}</a></h3>
-		<ui class="category-tags">
+		<ul class="category-tags">
 			<li *ngFor="let category of presenter.categories">
 				<a [routerLink]="['/categories', category.id]">{{category.name}}</a>
 			</li>
-		</ui>
+		</ul>
 	</li>
 </ul>
