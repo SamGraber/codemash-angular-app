@@ -16,10 +16,10 @@ const appRoutes: Routes = [
 	// 	path: 'events',
 	// 	component: null,
 	// },
-	// {
-	// 	path: 'presenters',
-	// 	component: null,
-	// },
+	{
+		path: 'presenters',
+		loadChildren: 'source/+presenters/presenters.module',
+	},
 	{
 		path: 'categories',
 		loadChildren: 'source/+categories/categories.module',
