@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { PresenterListComponent } from '../presenter-list/presenter-list.component';
+import { PresenterComponent } from '../presenter/presenter.component';
 import { PresenterListResolver } from './presenter-list.resolver';
 import { PresenterResolver } from './presenter.resolver';
 
@@ -18,7 +19,7 @@ const presenterRoutes: Routes = [
 	},
 	{
 		path: ':id',
-		component: null,
+		component: PresenterComponent,
 		resolve: {
 			presenter: PresenterResolver,
 		},
