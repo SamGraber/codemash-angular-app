@@ -1,0 +1,10 @@
+<ul class="events">
+	<li class="event" *ngFor="let event of events">
+		<h3>{{event.name}}</h3>
+		<h4>{{event.timeslot}}</h4>
+		<ul class="category-tags">
+			<li *ngFor="let category of event.categories"><a [routerLink]="['/categories', category.id]">{{category.name}}</a></li>
+		</ul>
+		<p>{{event.description}}</p>
+	</li>
+</ul>

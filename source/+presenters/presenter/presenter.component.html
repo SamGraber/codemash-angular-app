@@ -8,15 +8,6 @@
 			<li *ngFor="let category of presenter.categories"><a [routerLink]="['/categories', category.id]">{{category.name}}</a></li>
 		</ul>
 		<p>{{presenter.bio}}</p>
-		<ul class="events">
-			<li class="event" *ngFor="let event of presenter.events">
-				<h3>{{event.name}}</h3>
-				<h4>{{event.timeslot}}</h4>
-				<ul class="category-tags">
-					<li *ngFor="let subCategory of event.categories"><a [routerLink]="['/categories', subCategory.id]">{{subCategory.name}}</a></li>
-				</ul>
-				<p>{{event.description}}</p>
-			</li>
-		</ul>
+		<cm-event-list [events]="presenter.events"></cm-event-list>
 	</div>
 </div>
