@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs/Observable';
 
 import { CategoryResolver } from './category.resolver';
-import { Category } from '../shared/category';
+import { Category } from '../../types/category';
 
 interface ICategoryServiceMock {
 	getCategory: Sinon.SinonSpy;

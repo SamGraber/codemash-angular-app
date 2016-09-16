@@ -1,7 +1,7 @@
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 import { CategoryListComponent } from './category-list.component';
-import { Category } from '../shared/category';
+import { Category } from '../../types/category';
 
 interface IActivatedRouteMock {
 	data: BehaviorSubject<{ categories: Category[] }>;
