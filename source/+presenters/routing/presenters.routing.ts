@@ -1,5 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 
+import { PresenterListComponent } from '../presenter-list/presenter-list.component';
 import { PresenterListResolver } from './presenter-list.resolver';
 import { PresenterResolver } from './presenter.resolver';
 
@@ -10,7 +11,7 @@ export interface IPresenterDetailParams {
 const presenterRoutes: Routes = [
 	{
 		path: '',
-		component: null,
+		component: PresenterListComponent,
 		resolve: {
 			presenters: PresenterListResolver,
 		},
