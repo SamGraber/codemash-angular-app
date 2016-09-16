@@ -1,16 +1,19 @@
 <div *ngIf="presenter">
 	<div class="title">
-		<div class="return"><a routerLink="/categories"><i class="fa fa-reply"></i></a></div>
+		<div class="return"><a routerLink="/presenters"><i class="fa fa-reply"></i></a></div>
 		<h1>{{presenter.name}}</h1>
 	</div>
 	<div class="presenter">
-		<p>{{presenter.description}}</p>
+		<ul class="category-tags">
+			<li *ngFor="let category of presenter.categories"><a [routerLink]="['/categories', category.id]">{{category.name}}</a></li>
+		</ul>
+		<p>{{presenter.bio}}</p>
 		<ul class="events">
 			<li class="event" *ngFor="let event of presenter.events">
 				<h3>{{event.name}}</h3>
 				<h4>{{event.timeslot}}</h4>
 				<ul class="category-tags">
-					<li *ngFor="let subPresenter of event.categories"><a [routerLink]="['/categories', subPresenter.id]">{{subPresenter.name}}</a></li>
+					<li *ngFor="let subCategory of event.categories"><a [routerLink]="['/categories', subCategory.id]">{{subCategory.name}}</a></li>
 				</ul>
 				<p>{{event.description}}</p>
 			</li>
