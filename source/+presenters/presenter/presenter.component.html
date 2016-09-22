@@ -4,9 +4,7 @@
 		<h1>{{presenter.name}}</h1>
 	</div>
 	<div class="presenter">
-		<ul class="category-tags">
-			<li *ngFor="let category of presenter.categories"><a [routerLink]="['/categories', category.id]">{{category.name}}</a></li>
-		</ul>
+		<cm-category-tags [categories]="presenter.categories"></cm-category-tags>
 		<p>{{presenter.bio}}</p>
 		<cm-event-list [events]="presenter.events"></cm-event-list>
 	</div>

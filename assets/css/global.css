@@ -43,38 +43,6 @@ ul {
   padding: 0;
 }
 
-/* Category tags styling */
-ul.category-tags {
-	margin: 0.5em 0;
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	padding: 0;
-}
-
-ul.category-tags li {
-	display: inline-block;
-	background: #0c84a9;
-	color: white;
-	padding: 4px;
-	margin-right: 8px;
-	border-radius: 5px;
-	font-size: 0.8em;
-}
-
-ul.category-tags li a {
-	color: white;
-}
-
-ul.category-tags li:hover {
-	cursor: pointer;
-}
-
-ul.category-tags li a:hover {
-	color: orange;
-}
-
 /* Event styling */
 .event {
   margin-right: 25px;
