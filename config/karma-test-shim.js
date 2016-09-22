@@ -1,10 +1,9 @@
 /*global mocha, __karma__, window*/
 Error.stackTraceLimit = Infinity;
-mocha.setup({
-	timeout: 1000,
-});
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
 
 __karma__.loaded = function () { };
+window.expect = chai.expect;
 
 var basePath = '/base/';
 var appPath = basePath + 'source/';
@@ -18,7 +17,7 @@ function isSpecFile(path) {
 }
 
 function isAppFile(path) {
-  return isJsFile(path) && (path.substr(0, appPath.length) == appPath);
+	return isJsFile(path) && (path.substr(0, appPath.length) == appPath);
 }
 
 function endsWith(path, ending) {
@@ -43,8 +42,8 @@ System.import('system.config.js').then(function () {
 		var testing = providers[0];
 		var testingBrowser = providers[1];
 
-		testing.setBaseTestProviders(testingBrowser.TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
-			testingBrowser.TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
+		testing.TestBed.initTestEnvironment(testingBrowser.BrowserDynamicTestingModule
+										, testingBrowser.platformBrowserDynamicTesting());
 	});
 }).then(function () {
 	// Finally, load all spec files.
