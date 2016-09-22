@@ -16,8 +16,8 @@ export class CategoryComponent implements OnInit {
 	constructor(private activatedRoute: ActivatedRoute) { }
 
 	ngOnInit(): void {
-		this.activatedRoute.data.map((x: any) => x.category).subscribe(Category => {
-			this.category = Category;
+		this.activatedRoute.data.map((x: any) => x.category).subscribe(category => {
+			this.category = category;
 		});
 	}
 }
