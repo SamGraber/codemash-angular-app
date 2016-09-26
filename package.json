@@ -4,12 +4,10 @@
   "scripts": {
     "start": "tsc && npm-run-all --parallel tsc:w lite",
     "lite": "lite-server",
-    "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "test": "karma start config/karma.conf.js",
-    "test.debug": "karma start config/karma.debug.conf.js",
-    "typings": "typings"
+    "test.debug": "karma start config/karma.debug.conf.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -21,6 +19,7 @@
     "@angular/platform-browser": "~2.0.0",
     "@angular/platform-browser-dynamic": "~2.0.0",
     "@angular/router": "~3.0.0",
+    "@types/lodash": "^4.14.36",
     "bootstrap": "^3.3.6",
     "es6-shim": "^0.35.0",
     "lodash": "^4.15.0",
@@ -30,6 +29,9 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "@types/chai": "^3.4.33",
+    "@types/es6-shim": "^0.31.32",
+    "@types/sinon": "^1.16.31",
     "chai": "~3.5.0",
     "jasmine": "^2.5.2",
     "jasmine-core": "^2.5.2",
@@ -42,7 +44,6 @@
     "moment": "^2.15.1",
     "npm-run-all": "^3.1.0",
     "sinon": "~1.17.3",
-    "typescript": "^1.8.10",
-    "typings": "^1.3.2"
+    "typescript": "~2.0.3"
   }
 }
