@@ -1,5 +1,5 @@
-declare var expect: Chai.ExpectStatic;
-declare var assert: Chai.AssertStatic;
+declare const expect: Chai.ExpectStatic;
+declare const assert: Chai.AssertStatic;
 
 declare module Chai {
 	interface ChaiStatic {
